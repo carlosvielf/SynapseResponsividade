@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color:#EAEFF2;
+    font-family: Poppins;
+}
+
+.logo img {
+    width: 100px;
+    margin-left: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    background-color: #EAEFF2;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links i {
+    margin-right: 10px;
+    color: #428ce2;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+.menu-toggle {
+    display: none; 
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #EAEFF2;
+    width: 100%;
+    align-items: center;
+    z-index: 99; 
+}
+
+.nav-links.active li {
+    margin: 15px 0;
+}
+
+.nav-links.active li a {
+    padding: 10px 20px;
+}
+
+section {
+    width: 100%;
+    overflow: hidden; 
+}
+
+.banner{
+    width: 100%;
+    height: auto; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.produto-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.produto img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px; 
+}
+
+.produto {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    flex: 0 0 calc(25% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.produto p i {
+    color: #FFFF00;
+    margin: 5px;
+}
+
+.produto a {
+    color: white;
+    background-color: #36ab9c;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+footer {
+	text-align: center;
+    margin-top: 50px;
+}
+
+.logofooter {
+    width: 100px;
+    height: auto;
+    
+}
+
+@media screen and (max-width: 768px){
+    .produto-grid {
+        flex-direction: column;
+
+}
+
+    .nav-links {
+        display: none;
+    }
+    .menu-toggle {
+        display: block; 
+    }
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
